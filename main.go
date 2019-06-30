@@ -4,7 +4,7 @@ import (
 	"log"
 	"net"
 
-	pb "sample_model/Pb_Go"
+	pb "grpc-sample/Pb_Go"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
