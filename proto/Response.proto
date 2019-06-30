@@ -1,0 +1,8 @@
+syntax = "proto3";
+package Sample.Model;
+
+message Response {
+    int32 errCode = 1; //错误码, http请求失败时大于0
+    string errMsg = 2;//错误具体信息
+    map<string, string> data = 3;
+}

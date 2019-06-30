@@ -1,0 +1,18 @@
+// User.proto
+syntax = "proto3";
+package Sample.Model; //namesapce
+
+message User {
+    int64 id = 1; //主键id
+    string name = 2; //用户名
+    string avatar = 3; //头像
+    string address = 4; //地址
+    string mobile = 5; //手机号
+    map<string, string> ext = 6; //扩展信息
+}
+
+message UserList {
+    repeated User list = 1; //用户列表
+    int32 page = 2; //分页
+    int32 limit = 3; //分页条数
+}

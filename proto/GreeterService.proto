@@ -1,0 +1,10 @@
+syntax = "proto3";
+package Sample.Model; //namesapce
+
+import "User.proto";
+import "Response.proto";
+
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (User) returns (Response) {}
+}
