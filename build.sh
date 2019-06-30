@@ -13,7 +13,7 @@ mkdir -p $p/Pb_Go
 
 #编译
 cd $p/proto/
-protoc --php_out=$output/php --go_out=plugins=grpc:$p/Pb_Go/ --plugin=protoc-gen-grpc=/usr/bin/grpc_php_plugin  *.proto
+protoc --go_out=plugins=grpc:$p/Pb_Go/ --php_out=$output/php --grpc_out=$output/php  --plugin=protoc-gen-grpc=/usr/local/bin/grpc_php_plugin  *.proto
 
 #修改GPBMetadata命名空间
 cd $output/php
