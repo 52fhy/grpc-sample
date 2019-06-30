@@ -63,4 +63,8 @@ git version 2.14.1
 **3、PHP报错：Fatal error: Class '\Grpc\BaseStub' not found**   
 解决：使用`composer require grpc/grpc`安装grpc。另外对应的grpc C扩展也要安装。 
 
+**4、下载 github release包很慢怎么办?**  
+解决：下载Mac版 [`Free Download Manager` 下载工具](https://dn3.freedownloadmanager.org/5/5.1-latest/fdm.dmg)可以解决Github 下载缓慢或失败问题。速度嗖嗖的。  
+![](http://img2018.cnblogs.com/blog/663847/201906/663847-20190630182430341-213536082.png)
+
 
