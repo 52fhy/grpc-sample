@@ -6,6 +6,37 @@
 - PHP还需要按照grpc的c扩展。编译需要使用GCC4.8级以上版本。
 - 如果使用golang开发服务，依赖的第三方服务基本是下载不下来的，需要使用`go mod`增加映射规则到github仓库，github下载也是龟速。
 
+## 运行
+
+运行服务端
+
+``` go 
+go mod tidy 
+go run main.go
+```
+
+运行单元测试：
+``` go
+go test -v client_test.go
+```
+
+运行php客户端：  
+需要先安装扩展：
+``` bash
+pecl install protobuf
+pecl install grpc
+
+# 记得修改php.ini文件
+
+
+cd tests
+composer require grpc/grpc
+cd ../
+```
+然后执行代码
+``` php 
+php tests/client_test.php
+```
 
 ## 常见问题
 
@@ -31,4 +62,5 @@ git version 2.14.1
 
 **3、PHP报错：Fatal error: Class '\Grpc\BaseStub' not found**   
 解决：使用`composer require grpc/grpc`安装grpc。另外对应的grpc C扩展也要安装。 
+
 
